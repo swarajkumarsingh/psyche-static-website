@@ -1,0 +1,15 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.carousel-custom-css {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-custom-css img {
+  width: 100%;
+  object-fit: cover;
+}
