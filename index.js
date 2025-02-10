@@ -1,3 +1,8 @@
+document.documentElement.classList.remove("dark");
+localStorage.setItem("theme", "light");
+if (localStorage.getItem("theme") === "light") {
+  document.documentElement.classList.remove("dark");
+}
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
