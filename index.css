@@ -1,3 +1,9 @@
+/* Force Light Mode */
+.light {
+    color-scheme: light;
+}
+
+
 body,
 html {
   height: 100%;
