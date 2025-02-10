@@ -11,6 +11,17 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("scale-y-100");
 });
 
+const phoneIcons = document.getElementsByClassName("feather-phone");
+
+for (let i = 0; i < phoneIcons.length; i++) {
+  phoneIcons[i].addEventListener("click", function () {
+    console.log("clicked");
+    const phoneNumber = "+919341216202";
+    window.location.href = `tel:${phoneNumber}`;
+  });
+}
+
+
 if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches
