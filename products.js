@@ -4,6 +4,10 @@ if (localStorage.getItem("theme") === "light") {
   document.documentElement.classList.remove("dark");
 }
 
+document.getElementById("go-top").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -13,7 +17,7 @@ menuToggle.addEventListener("click", () => {
 });
 
 const JSON_URL_DEV = "https://jsonkeeper.com/b/11UU";
-const JSON_URL_PROD = "https://api.jsonbin.io/v3/b/67ab813ce41b4d34e489e8b4";
+const JSON_URL_PROD = "https://api.jsonbin.io/v3/b/67ab8181e41b4d34e489e8ee";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const container = document.getElementById("product-container");
