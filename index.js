@@ -4,6 +4,10 @@ if (localStorage.getItem("theme") === "light") {
   document.documentElement.classList.remove("dark");
 }
 
+document.getElementById("go-top").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
