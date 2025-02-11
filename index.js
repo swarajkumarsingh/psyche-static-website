@@ -3,6 +3,7 @@ localStorage.setItem("theme", "light");
 if (localStorage.getItem("theme") === "light") {
   document.documentElement.classList.remove("dark");
 }
+
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -23,8 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const products = jsonData.record;
 
     if (products == "" || products == null || products == undefined) {
-      document.getElementById("loading").style.display = "none";
-      container.innerHTML = `<div id="error" class="text-center text-lg font-semibold text-gray-700">Error fetching data</div>`;
+      document.getElementById("loading").innerText = "Failed to load products.";
     }
 
     products.forEach((product) => {
@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                         <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                             <div class="h-56 w-full">
                                 <a href="#">
-                                    <img class="mx-auto h-full" src="${product.image_url}" alt="${product.title}" />
+                                    <img class="mx-auto h-full" src="${
+                                      product.image_url
+                                    }" alt="${product.title}" />
                                 </a>
                             </div>
 
@@ -113,18 +115,24 @@ document.addEventListener("DOMContentLoaded", async function () {
                                     ${product.title}
                                 </a>
 
-                                <p class="mt-2 text-sm font-medium text-gray-500">Artist: ${product.artist}</p>
-                                <p class="mt-2 text-sm font-medium text-gray-500">Phone: ${product.phone}</p>
+                                <p class="mt-2 text-sm font-medium text-gray-500">Artist: ${
+                                  product.artist
+                                }</p>
+                                <a href="tel:${
+                                  product.phone
+                                }"><p class="mt-2 text-sm font-medium text-gray-500">Phone: ${
+        product.phone
+      }</p></a>
 
-                                <div class="mt-4 flex items-center justify-between gap-4">
-                                    <p class="text-2xl font-extrabold leading-tight text-gray-900">
-                                        ₹${product.price}
-                                    </p>
+          <div class="mt-4 flex items-center justify-between gap-4">
+              <p class="text-lg font-medium text-gray-500 line-through">₹${(
+                Number(product.price) + 500
+              ).toLocaleString()}</p>
+              <p class="text-2xl font-extrabold leading-tight text-gray-900">₹${Number(
+                product.price
+              ).toLocaleString()}</p>
 
-                                    <button type="button" class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white">
-                                        Add to cart
-                                    </button>
-                                </div>
+          </div>
                             </div>
                         </div>
                     `;
@@ -144,8 +152,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    container.innerHTML =
-      "<p class='text-red-500'>Failed to load products.</p>";
+    document.getElementById("loading").innerText = "Failed to load products.";
   }
 });
 
