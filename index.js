@@ -11,18 +11,24 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("scale-y-100");
 });
 
+const JSON_URL_DEV = "https://jsonkeeper.com/b/11UU";
+const JSON_URL_PROD = "https://api.jsonbin.io/v3/b/67ab61c5e41b4d34e489d10e";
 
-  document.addEventListener("DOMContentLoaded", async function () {
-    const apiUrl = "https://api.jsonbin.io/v3/b/67ab61c5e41b4d34e489d10e"; // JSONBin API URL
-    const container = document.getElementById("product-container");
+document.addEventListener("DOMContentLoaded", async function () {
+  const container = document.getElementById("product-container");
 
-    try {
-      const response = await fetch(apiUrl);
-      const jsonData = await response.json();
-      const products = jsonData.record; // Accessing data inside 'record' property
+  try {
+    const response = await fetch(JSON_URL_PROD);
+    const jsonData = await response.json();
+    const products = jsonData.record;
 
-      products.forEach((product) => {
-        const card = `
+    if (products == "" || products == null || products == undefined) {
+      document.getElementById("loading").style.display = "none";
+      container.innerHTML = `<div id="error" class="text-center text-lg font-semibold text-gray-700">Error fetching data</div>`;
+    }
+
+    products.forEach((product) => {
+      const card = `
                         <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                             <div class="h-56 w-full">
                                 <a href="#">
@@ -122,24 +128,26 @@ menuToggle.addEventListener("click", () => {
                             </div>
                         </div>
                     `;
-        container.innerHTML += card;
+      container.innerHTML += card;
+    });
+
+    document.getElementById("loading").style.display = "none";
+
+    const phoneIcons = document.getElementsByClassName("feather-phone");
+
+    for (let i = 0; i < phoneIcons.length; i++) {
+      phoneIcons[i].addEventListener("click", function () {
+        console.log("clicked");
+        const phoneNumber = "+919341216202";
+        window.location.href = `tel:${phoneNumber}`;
       });
-
-      const phoneIcons = document.getElementsByClassName("feather-phone");
-
-      for (let i = 0; i < phoneIcons.length; i++) {
-        phoneIcons[i].addEventListener("click", function () {
-          console.log("clicked");
-          const phoneNumber = "+919341216202";
-          window.location.href = `tel:${phoneNumber}`;
-        });
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      container.innerHTML =
-        "<p class='text-red-500'>Failed to load products.</p>";
     }
-  });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    container.innerHTML =
+      "<p class='text-red-500'>Failed to load products.</p>";
+  }
+});
 
 const phoneIcons = document.getElementsByClassName("feather-phone");
 
@@ -150,7 +158,6 @@ for (let i = 0; i < phoneIcons.length; i++) {
     window.location.href = `tel:${phoneNumber}`;
   });
 }
-
 
 if (
   window.matchMedia &&
