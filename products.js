@@ -1,5 +1,3 @@
-import {PRODUCT_PRODUCT_URL} from './key.js'
-
 document.documentElement.classList.remove("dark");
 localStorage.setItem("theme", "light");
 if (localStorage.getItem("theme") === "light") {
@@ -19,12 +17,13 @@ menuToggle.addEventListener("click", () => {
 });
 
 const JSON_URL_DEV = "https://jsonkeeper.com/b/11UU";
+const JSON_URL_PROD = "https://api.jsonbin.io/v3/b/67ab8181e41b4d34e489e8ee";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const container = document.getElementById("product-container");
 
   try {
-    const response = await fetch(PRODUCT_PRODUCT_URL);
+    const response = await fetch(JSON_URL_PROD);
     const jsonData = await response.json();
     const products = jsonData.record;
 
