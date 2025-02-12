@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const card = `
                         <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                             <div class="h-56 w-full">
-                                <a href="#">
+                                <a href="#artworks-section">
                                     <img class="mx-auto h-full" src="${
                                       product.image_url
                                     }" alt="${product.title}" />
