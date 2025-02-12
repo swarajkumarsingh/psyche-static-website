@@ -4,6 +4,18 @@ if (localStorage.getItem("theme") === "light") {
   document.documentElement.classList.remove("dark");
 }
 
+window.scroll({
+  top: 2500,
+  left: 0,
+  behavior: "smooth",
+});
+
+window.scrollBy({
+  top: 100,
+  left: 0,
+  behavior: "smooth",
+});
+
 document.getElementById("go-top").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });

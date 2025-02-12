@@ -4,12 +4,32 @@ if (localStorage.getItem("theme") === "light") {
   document.documentElement.classList.remove("dark");
 }
 
+window.scroll({
+  top: 2500,
+  left: 0,
+  behavior: "smooth",
+});
+
+window.scrollBy({
+  top: 100,
+  left: 0,
+  behavior: "smooth",
+});
+
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.querySelectorAll("#mobile-menu a");
 
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("scale-y-0");
   mobileMenu.classList.toggle("scale-y-100");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("scale-y-0");
+    mobileMenu.classList.remove("scale-y-100");
+  });
 });
 
 const JSON_URL_DEV = "https://jsonkeeper.com/b/11UU";

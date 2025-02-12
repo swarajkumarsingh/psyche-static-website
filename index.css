@@ -3,6 +3,10 @@
     color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 body,
 html {
