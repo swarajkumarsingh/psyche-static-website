@@ -134,10 +134,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                                 <p class="mt-2 text-sm font-medium text-gray-500">Artist: ${
                                   product.artist
                                 }</p>
-                                <a href="tel:${
-                                  product.phone
-                                }"><p class="mt-2 text-sm font-medium text-gray-500">Phone: ${
-        product.phone
+                                <a href="mailto:${
+                                  product.contact
+                                }"><p class="mt-2 text-sm font-medium text-gray-500">Contact: ${
+        product.contact
       }</p></a>
 
           <div class="mt-4 flex items-center justify-between gap-4">
