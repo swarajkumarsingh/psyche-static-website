@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <a href="mailto:${product.contact}" class="relative group">
             <button
               type="button"
-              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
             >
               <span class="sr-only"> Mail </span>
               <!-- Mail Icon -->
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <a href="tel:${DEFAULT_CUSTOMER_CARE_NUMBER}" class="relative group">
             <button
               type="button"
-              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
             >
               <span class="sr-only"> Call </span>
               <!-- Call Icon -->
