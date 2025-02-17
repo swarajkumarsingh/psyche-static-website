@@ -152,31 +152,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
     document.getElementById("loading").style.display = "none";
-
-    // const phoneIcons = document.getElementsByClassName("feather-phone");
-
-    // for (let i = 0; i < phoneIcons.length; i++) {
-    //   phoneIcons[i].addEventListener("click", function () {
-    //     console.log("clicked");
-    //     const phoneNumber = "+919341216202";
-    //     window.location.href = `tel:${phoneNumber}`;
-    //   });
-    // }
   } catch (error) {
     console.error("Error fetching data:", error);
     document.getElementById("loading").innerText = "Failed to load products.";
   }
 });
-
-// const phoneIcons = document.getElementsByClassName("feather-phone");
-
-// for (let i = 0; i < phoneIcons.length; i++) {
-//   phoneIcons[i].addEventListener("click", function () {
-//     console.log("clicked");
-//     const phoneNumber = "+919341216202";
-//     window.location.href = `tel:${phoneNumber}`;
-//   });
-// }
 
 if (
   window.matchMedia &&
