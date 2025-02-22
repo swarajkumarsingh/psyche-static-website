@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", async function () {
               product.contact
             }</p>
             <div class="mt-4 flex items-center justify-between gap-4">
-              <p class="text-lg font-medium text-gray-500 line-through">₹${(
-                Number(product.price) + 500
+              <p class="text-lg font-medium text-gray-500 line-through">₹${Number(
+                product.max_price
               ).toLocaleString()}</p>
               <p class="text-2xl font-extrabold leading-tight text-gray-900">₹${Number(
                 product.price
