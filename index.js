@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="mb-4 flex items-center justify-between gap-4">
               <div class="mt-2 flex items-center gap-2">
                 <div class="flex items-center">${stars}</div>
-                <p class="text-sm font-medium text-gray-900">${
-                  product.rating || "N/A"
-                }</p>
+                  <p class="text-sm font-medium text-gray-900">${
+                    product.rating ? product.rating.toFixed(1) : "N/A"
+                  }</p>
               </div>
               <div class="flex items-center justify-end gap-1">
                 <a href="mailto:${product.contact}" class="relative group">

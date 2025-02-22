@@ -33,7 +33,6 @@ menuToggle.addEventListener("click", () => {
 const JSON_URL_DEV = "https://jsonkeeper.com/b/11UU";
 const JSON_URL_PROD = "https://api.jsonbin.io/v3/b/67ab8181e41b4d34e489e8ee";
 
-
 document.addEventListener("DOMContentLoaded", async function () {
   const container = document.getElementById("product-container");
 
@@ -70,10 +69,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="mb-4 flex items-center justify-between gap-4">
               <div class="mt-2 flex items-center gap-2">
                 <div class="flex items-center">${stars}</div>
-                <p class="text-sm font-medium text-gray-900">${
-                  product.rating || "N/A"
-                }</p>
-              </div>
+                  <p class="text-sm font-medium text-gray-900">${
+                    product.rating ? product.rating.toFixed(1) : "N/A"
+                  }</p>
+                </div>
               <div class="flex items-center justify-end gap-1">
                 <a href="mailto:${product.contact}" class="relative group">
                   <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900">
