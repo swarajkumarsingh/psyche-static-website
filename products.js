@@ -58,9 +58,59 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     <div class="pt-6">
       <div class="mb-4 flex items-center justify-between gap-4">
-        <span class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800">
-          ${product.offer}
-        </span>
+<div class="mt-2 flex items-center gap-2">
+                <div class="flex items-center">
+                  <svg
+                    class="h-4 w-4 text-yellow-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-4 w-4 text-yellow-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-4 w-4 text-yellow-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-4 w-4 text-yellow-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z"
+                    />
+                  </svg>
+                </div>
+
+                <p class="text-sm font-medium text-gray-900">5.0</p>
+              </div>
 
         <div class="flex items-center justify-end gap-1">
 
@@ -68,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <a href="mailto:${product.contact}" class="relative group">
             <button
               type="button"
-              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
             >
               <span class="sr-only"> Mail </span>
               <!-- Mail Icon -->
@@ -88,7 +138,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <a href="tel:${DEFAULT_CUSTOMER_CARE_NUMBER}" class="relative group">
             <button
               type="button"
-              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
             >
               <span class="sr-only"> Call </span>
               <!-- Call Icon -->
