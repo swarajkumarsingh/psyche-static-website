@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     products.forEach((product) => {
-      const rating = Math.round(product.rating || 0); // Ensure rating is an integer
+      const rating = Math.round(product.rating || 0);
       let stars = "";
       for (let i = 1; i <= 5; i++) {
         stars += `<svg class="h-4 w-4 ${
