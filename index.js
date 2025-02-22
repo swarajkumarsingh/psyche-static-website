@@ -99,9 +99,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             <a href="#" class="text-lg font-semibold leading-tight text-gray-900 hover:underline">${
               product.title
             }</a>
+            <a href="${product.artist_link}">
             <p class="mt-2 text-sm font-medium text-gray-500">Artist: ${
               product.artist
             }</p>
+            </a>
             <p class="mt-2 text-sm font-medium text-gray-500">Contact: ${
               product.contact
             }</p>
