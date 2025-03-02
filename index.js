@@ -108,12 +108,30 @@ document.addEventListener("DOMContentLoaded", async function () {
               product.contact
             }</p>
             <div class="mt-4 flex items-center justify-between gap-4">
-              <p class="text-lg font-medium text-gray-500 line-through">₹${Number(
-                product.max_price
-              ).toLocaleString()}</p>
-              <p class="text-2xl font-extrabold leading-tight text-gray-900">₹${Number(
-                product.price
-              ).toLocaleString()}</p>
+              
+              <p className="text-lg font-medium text-gray-500 line-through">
+                ${
+                  product.max_price === "NA"
+                    ? "N/A"
+                    : `₹${
+                        Number(product.max_price)
+                          ? Number(product.max_price).toLocaleString()
+                          : "N/A"
+                      }`
+                }
+              </p>
+              <p className="text-2xl font-extrabold leading-tight text-gray-900">
+              ${
+                product.price === "NA"
+                  ? "N/A"
+                  : `₹${
+                      Number(product.price)
+                        ? Number(product.price).toLocaleString()
+                        : "N/A"
+                    }`
+              }
+              </p>
+
             </div>
           </div>
         </div>
