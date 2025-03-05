@@ -1,4 +1,4 @@
-const DEFAULT_CUSTOMER_CARE_NUMBER = 9341213202;
+const DEFAULT_CUSTOMER_CARE_NUMBER = 8860899880;
 
 document.documentElement.classList.remove("dark");
 localStorage.setItem("theme", "light");

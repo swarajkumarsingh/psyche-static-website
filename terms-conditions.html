@@ -38,7 +38,7 @@
             <img
               class="mr-3"
               src="./assets/images/logo.png"
-              style="height: 58px; width: auto;"
+              style="height: 58px; width: auto"
               class="mr-3 h-8 sm:h-10"
               alt="Psyche Logo"
             />
@@ -241,11 +241,11 @@
           <div class="mb-6 md:mb-0">
             <a href="#" class="flex items-center">
               <img
+                src="./assets/images/logo.png"
                 class="mr-3"
                 style="height: 50px; width: auto"
                 class="h-8 me-3"
                 alt="Psyche Logo"
-                1
               />
               <span
                 class="self-center text-3xl font-bold tracking-wide text-gray-900 whitespace-nowrap"
@@ -369,13 +369,41 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
     <!-- External Links -->
     <script>
       window.onload = function () {
         window.scrollTo(0, 0);
       };
+
+      window.scroll({
+        top: 2500,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      window.scrollBy({
+        top: 100,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinks = document.querySelectorAll("#mobile-menu a");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("scale-y-0");
+        mobileMenu.classList.toggle("scale-y-100");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("scale-y-0");
+          mobileMenu.classList.remove("scale-y-100");
+        });
+      });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
